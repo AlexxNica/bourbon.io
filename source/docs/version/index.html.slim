@@ -10,7 +10,6 @@
 - content_for(:page_header)
   h1 Documentation
 
-div.p-grid-container
   nav role="navigation"
     ol
       - versions.reverse_each do |version|
@@ -19,10 +18,15 @@ div.p-grid-container
       li
         = link_to "4.2.7", "/docs/4.2.7/"
 
+div.p-grid-container
+  / = partial "versions_nav", locals: { versions: versions }
+
   nav role="navigation"
     = link_to "Installation", "/docs/installation/"
 
     = link_to "Upgrade to v5", "/docs/upgrade-from-v4-to-v5/"
+
+    = link_to "Feature Reference", "/docs/latest/"
 
     ol
       - version.doc_items.each do |item|

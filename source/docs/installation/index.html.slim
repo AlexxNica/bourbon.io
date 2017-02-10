@@ -1,5 +1,12 @@
 - content_for(:page_header)
-  h1 Documentation
+  h1 Installation
 
 div.p-grid-container
+  nav role="navigation"
+    = link_to "Installation", "/docs/installation/"
+
+    = link_to "Upgrade to v5", "/docs/upgrade-from-v4-to-v5/"
+
+    = link_to "Feature Reference", "/docs/latest/"
+
   = partial "installation_guide"
